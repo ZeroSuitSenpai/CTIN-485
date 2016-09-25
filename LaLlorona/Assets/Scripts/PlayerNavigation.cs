@@ -15,6 +15,7 @@ public class PlayerNavigation : MonoBehaviour {
         ClickToMove();
 	}
 
+    //Pretty self explanatory 
     void ClickToMove()
     {
         if (Input.GetMouseButtonDown(0))
@@ -28,4 +29,4 @@ public class PlayerNavigation : MonoBehaviour {
             }
         }
     }
-}
+}  
