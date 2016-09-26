@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="118">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3258297918" Name="Play_Travel" ObjectPath="\Events\Default Work Unit\Play_Travel"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="64261701" Language="SFX">
+					<ShortName>Travel02.wav</ShortName>
+					<Path>SFX\Travel02_D057ED4E.wem</Path>
+				</File>
+				<File Id="166699616" Language="SFX">
+					<ShortName>Travel03.wav</ShortName>
+					<Path>SFX\Travel03_73946C08.wem</Path>
+				</File>
+				<File Id="911402553" Language="SFX">
+					<ShortName>Travel04.wav</ShortName>
+					<Path>SFX\Travel04_E1442E07.wem</Path>
+				</File>
+				<File Id="1055344304" Language="SFX">
+					<ShortName>Travel01.wav</ShortName>
+					<Path>SFX\Travel01_9E69E797.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{357C2FA8-E02E-4BB2-B032-A50C0DAEE971}" SchemaVersion="72">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{357C2FA8-E02E-4BB2-B032-A50C0DAEE971}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Travel" ID="{EA77747C-0F37-4441-ABDF-AB786DA24716}" ShortID="437144325">
+					<PropertyList>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{74C3CAD5-1E72-4721-A704-C60CE91E1A45}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C35E63C-D5C4-4438-865B-06513AADFFD7}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Travel04" ID="{3E326F23-2961-4B87-A6EB-4A827ABD028A}" ShortID="930500202" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{74C3CAD5-1E72-4721-A704-C60CE91E1A45}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C35E63C-D5C4-4438-865B-06513AADFFD7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Travel04" ID="{0C42A9E8-A379-49EF-BD80-641E34639BEF}" ShortID="911402553">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="3.29574519364881"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Travel04.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Travel04" ID="{0C42A9E8-A379-49EF-BD80-641E34639BEF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Travel01" ID="{CBBC273E-3953-478C-AEF9-840D359CAF84}" ShortID="624711178" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{74C3CAD5-1E72-4721-A704-C60CE91E1A45}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C35E63C-D5C4-4438-865B-06513AADFFD7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Travel01" ID="{C69A7DD7-BAEB-423C-860D-41BC58C7DBFC}" ShortID="1055344304">
+									<Language>SFX</Language>
+									<AudioFile>Travel01.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Travel01" ID="{C69A7DD7-BAEB-423C-860D-41BC58C7DBFC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Travel02" ID="{E193A779-0B45-4E38-8959-DD04D6B3CB87}" ShortID="143889295" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{74C3CAD5-1E72-4721-A704-C60CE91E1A45}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C35E63C-D5C4-4438-865B-06513AADFFD7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Travel02" ID="{3A1BD0BB-64BA-4AA1-BD2E-A9BB9B86297F}" ShortID="64261701">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.09311964333756"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Travel02.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Travel02" ID="{3A1BD0BB-64BA-4AA1-BD2E-A9BB9B86297F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Travel03" ID="{A9C6087B-95A1-4B01-92DC-20C8AB2E86BE}" ShortID="252192860" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{74C3CAD5-1E72-4721-A704-C60CE91E1A45}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C35E63C-D5C4-4438-865B-06513AADFFD7}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Travel03" ID="{62ED79F4-4319-4DA2-BCE1-1A0951E30517}" ShortID="166699616">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.58755847153879"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Travel03.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Travel03" ID="{62ED79F4-4319-4DA2-BCE1-1A0951E30517}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

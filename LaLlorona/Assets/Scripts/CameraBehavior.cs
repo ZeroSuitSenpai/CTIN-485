@@ -51,8 +51,5 @@ public class CameraBehavior : MonoBehaviour {
             //And adjust the camera's height
             transform.position = Vector3.Lerp(transform.position, transform.position + new Vector3 (0, difference, 0), Time.deltaTime);
         }
-
-        Debug.Log(currentDistance);
-
     }
 }

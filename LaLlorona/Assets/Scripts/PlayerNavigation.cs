@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerNavigation : MonoBehaviour {
 
     NavMeshAgent navigationAgent;
+    public AudioMaster SoundMaster;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class PlayerNavigation : MonoBehaviour {
             if (Physics.Raycast(mouseRay, out mouseClick, 100))
             {
                 navigationAgent.SetDestination(mouseClick.point);
+                SoundMaster.PlayTravelSFX();
             }
         }
     }

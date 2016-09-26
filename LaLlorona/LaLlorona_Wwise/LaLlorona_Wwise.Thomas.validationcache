@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationCache Version="1" SchemaVersion="72">
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2222921330" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Attenuations\Default Work Unit.wwu" DateLow="2222881315" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Audio Devices\Default Work Unit.wwu" DateLow="2222756282" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Control Surface Sessions\Default Work Unit.wwu" DateLow="2222666252" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Conversion Settings\Default Work Unit.wwu" DateLow="2222321106" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1223961148" DateHigh="30543429"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="2222291095" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Effects\Default Work Unit.wwu" DateLow="2222901324" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Effects\Factory Effects.wwu" DateLow="1222270838" DateHigh="30543429"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Events\Default Work Unit.wwu" DateLow="2222936335" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Game Parameters\Default Work Unit.wwu" DateLow="2223151417" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="2222986366" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\LaLlorona_Wwise.Thomas.wsettings" DateLow="3533021926" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\LaLlorona_Wwise.wproj" DateLow="3236546322" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="2223001372" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="2222776274" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Modulators\Default Work Unit.wwu" DateLow="2222571197" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Presets\Default Work Unit.wwu" DateLow="2222796280" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Queries\Default Work Unit.wwu" DateLow="2222846300" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Queries\Factory Queries.wwu" DateLow="1223555967" DateHigh="30543429"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\SoundBanks\Default Work Unit.wwu" DateLow="2222811286" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="2222831295" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\States\Default Work Unit.wwu" DateLow="2222966357" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Switches\Default Work Unit.wwu" DateLow="2222951355" DateHigh="30545846"/>
+	<ValidationCacheItem File="C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\Triggers\Default Work Unit.wwu" DateLow="2222861306" DateHigh="30545846"/>
+</ValidationCache>

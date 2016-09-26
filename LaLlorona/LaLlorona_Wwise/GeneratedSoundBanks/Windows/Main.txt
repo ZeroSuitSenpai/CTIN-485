@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3258297918	Play_Travel			\Default Work Unit\Play_Travel	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	64261701	Travel02	C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\.cache\Windows\SFX\Travel02_D057ED4E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Travel\Travel02		948540
+	166699616	Travel03	C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\.cache\Windows\SFX\Travel03_73946C08.wem		\Actor-Mixer Hierarchy\Default Work Unit\Travel\Travel03		1045376
+	911402553	Travel04	C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\.cache\Windows\SFX\Travel04_E1442E07.wem		\Actor-Mixer Hierarchy\Default Work Unit\Travel\Travel04		1211140
+	1055344304	Travel01	C:\Users\Thomas\Desktop\CTIN-485_Homework\LaLlorona\LaLlorona_Wwise\.cache\Windows\SFX\Travel01_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Travel\Travel01		1005648
+
