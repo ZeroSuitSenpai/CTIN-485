@@ -28,8 +28,7 @@ public class PlayerActionController : NetworkBehaviour
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
 
-        anim.SetFloat("inputH", inputH);
-        anim.SetFloat("inputV", inputV);
+        CmdUpdateAnimations(inputH, inputV);
 
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
@@ -52,6 +51,17 @@ public class PlayerActionController : NetworkBehaviour
     public override void OnStartLocalPlayer()
     {
         anim = GetComponent<Animator>();
+    }
+
+    [ClientRpc]
+    void RpcUpdateAnimations(float h, float v) {
+        anim.SetFloat("inputH", h);
+        anim.SetFloat("inputV", v);
+    }
+
+    [Command]
+    void CmdUpdateAnimations(float h, float v) {
+        RpcUpdateAnimations(h, v);
     }
 
     [Command]
