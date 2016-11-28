@@ -7,9 +7,10 @@ public class PlayerActionController : NetworkBehaviour
     public GameObject genericProjPrefab;
     public GameObject teleporterPrefab;
 
-    GameObject teleporterProjectile;
+    //wanna sync this one
+    protected TeleporterLogic teleporterProjectile;
 
-    public GameObject teleporterInstance;
+    public TeleporterLogic teleporterInstance;
     public Transform genericProjSpawn;
 
     void Update()
@@ -70,21 +71,25 @@ public class PlayerActionController : NetworkBehaviour
         if (base.isServer)
         {
             // Create generic projectile prefab
-            teleporterProjectile = (GameObject)Instantiate(teleporterPrefab, genericProjSpawn.position, genericProjSpawn.rotation);
+            teleporterProjectile = (TeleporterLogic)Instantiate(teleporterPrefab, genericProjSpawn.position, genericProjSpawn.rotation) as TeleporterLogic;
 
             // Make prefab move
-            teleporterProjectile.GetComponent<TeleporterLogic>().velocity = teleporterProjectile.transform.forward * 6;
+            teleporterProjectile.velocity = teleporterProjectile.transform.forward * 6;
 
             //Spawn it on the network
-            NetworkServer.Spawn(teleporterProjectile);
+            NetworkServer.Spawn(teleporterProjectile.gameObject);
+
+            //Call an rpc to set the teleporter instance everywhere
+            RpcSetTeleporterInstance(teleporterProjectile.gameObject);
 
             // Destroy the bullet after 2 seconds
-            Destroy(teleporterProjectile, 4.0f);
+            Destroy(teleporterProjectile.gameObject, 4.0f);
         }
-        if (isLocalPlayer)
-        {
-            teleporterInstance = teleporterProjectile;
-        }
+    }
+
+    [ClientRpc]
+    void RpcSetTeleporterInstance(GameObject teleporterPorjectile) {
+        teleporterInstance = teleporterProjectile.GetComponent<TeleporterLogic>();
     }
 
     [Command]
@@ -92,7 +97,7 @@ public class PlayerActionController : NetworkBehaviour
     {
         if (base.isServer)
         {
-            gameObject.transform.position = teleporterProjectile.transform.position;
+            gameObject.transform.position = teleporterInstance.transform.position;
             Destroy(teleporterProjectile);
         }
     }
