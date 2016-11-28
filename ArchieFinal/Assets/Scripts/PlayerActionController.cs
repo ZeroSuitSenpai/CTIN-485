@@ -7,10 +7,7 @@ public class PlayerActionController : NetworkBehaviour
     public GameObject genericProjPrefab;
     public GameObject teleporterPrefab;
 
-    //wanna sync this one
-    protected TeleporterLogic teleporterProjectile;
-
-    public TeleporterLogic teleporterInstance;
+    public GameObject teleporterInstance;
     public Transform genericProjSpawn;
 
     void Update()
@@ -33,13 +30,10 @@ public class PlayerActionController : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            //If theres no puck orb shoot a puck orb
             if (teleporterInstance == null)
             {
                 CmdTeleporter();
-            }
-            else
-            {
-                CmdTranslocate();
             }
         }
     }
@@ -71,34 +65,22 @@ public class PlayerActionController : NetworkBehaviour
         if (base.isServer)
         {
             // Create generic projectile prefab
-            teleporterProjectile = (TeleporterLogic)Instantiate(teleporterPrefab, genericProjSpawn.position, genericProjSpawn.rotation) as TeleporterLogic;
+            teleporterInstance = (GameObject)Instantiate(teleporterPrefab, genericProjSpawn.position, genericProjSpawn.rotation);
+
+            //Get the script we want
+            TeleporterLogic tLogic = teleporterInstance.GetComponent<TeleporterLogic>();
 
             // Make prefab move
-            teleporterProjectile.velocity = teleporterProjectile.transform.forward * 6;
+            tLogic.GetComponent<TeleporterLogic>().velocity = teleporterInstance.transform.forward * 6;
+
+            //Set its owner to be this object across the network
+            tLogic.RpcSetPlayerOwner(gameObject);
 
             //Spawn it on the network
-            NetworkServer.Spawn(teleporterProjectile.gameObject);
-
-            //Call an rpc to set the teleporter instance everywhere
-            RpcSetTeleporterInstance(teleporterProjectile.gameObject);
+            NetworkServer.Spawn(teleporterInstance);
 
             // Destroy the bullet after 2 seconds
-            Destroy(teleporterProjectile.gameObject, 4.0f);
-        }
-    }
-
-    [ClientRpc]
-    void RpcSetTeleporterInstance(GameObject teleporterPorjectile) {
-        teleporterInstance = teleporterProjectile.GetComponent<TeleporterLogic>();
-    }
-
-    [Command]
-    void CmdTranslocate()
-    {
-        if (base.isServer)
-        {
-            gameObject.transform.position = teleporterInstance.transform.position;
-            Destroy(teleporterProjectile);
+            Destroy(teleporterInstance.gameObject, 4.0f);
         }
     }
 }
