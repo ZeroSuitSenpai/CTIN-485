@@ -45,6 +45,10 @@ public class PlayerActionController : NetworkBehaviour
             {
                 CmdTeleporter();
             }
+            else {
+                Debug.Log("Made It Here");
+                CmdServerTeleport(teleporterInstance);
+            }
         }
     }
 
@@ -100,8 +104,28 @@ public class PlayerActionController : NetworkBehaviour
             //Spawn it on the network
             NetworkServer.Spawn(teleporterInstance);
 
-            // Destroy the bullet after 4 seconds
-            Destroy(teleporterInstance.gameObject, 4.0f);
+            //Set the instance on the network
+            RpcSetTeleporter(teleporterInstance);
+
+            // Destroy the bullet after 2 seconds
+            Destroy(teleporterInstance.gameObject, 2.0f);
         }
+    }
+
+    [ClientRpc]
+    void RpcSetTeleporter(GameObject teleporter) {
+        teleporterInstance = teleporter;
+    }
+
+    [Command]
+    void CmdServerTeleport(GameObject teleporter) {
+        RpcClientTeleport(teleporter);
+    }
+    [ClientRpc]
+    void RpcClientTeleport(GameObject teleporter) {
+        Vector3 targetPos = teleporterInstance.transform.position;
+        Destroy(teleporterInstance);
+        teleporterInstance = null;
+        transform.position = targetPos;
     }
 }

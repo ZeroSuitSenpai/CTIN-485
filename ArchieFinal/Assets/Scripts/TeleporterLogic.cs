@@ -9,15 +9,6 @@ public class TeleporterLogic : NetworkBehaviour
     public Vector3 velocity;
     public GameObject playerOwner;
 
-    private void Update() {
-        //If the local player hits q, teleport
-        if (isLocalPlayer) {
-            if (Input.GetKeyDown(KeyCode.Q)) {
-                CmdTeleport();
-            }
-        }
-    }
-
     private void FixedUpdate()
     {
         // we want the bullet to be updated only on the server
@@ -31,17 +22,6 @@ public class TeleporterLogic : NetworkBehaviour
     [ClientRpc]
     public void RpcSetPlayerOwner(GameObject player) {
         playerOwner = player;
-    }
-
-    [Command]
-    void CmdTeleport() {
-        if (playerOwner != null) {
-            playerOwner.transform.position = transform.position;
-            Destroy(gameObject);
-        }
-        else {
-            Debug.LogError("Do not have a player");
-        }
     }
 
     protected void OnDisable() {
