@@ -4,6 +4,11 @@ using UnityEngine.Networking;
 public class PlayerActionController : NetworkBehaviour
 {
 
+    public Animator anim;
+
+    float inputH;
+    float inputV;
+
     public GameObject genericProjPrefab;
     public GameObject teleporterPrefab;
 
@@ -19,6 +24,12 @@ public class PlayerActionController : NetworkBehaviour
 
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+
+        inputH = Input.GetAxis("Horizontal");
+        inputV = Input.GetAxis("Vertical");
+
+        anim.SetFloat("inputH", inputH);
+        anim.SetFloat("inputV", inputV);
 
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
@@ -40,7 +51,7 @@ public class PlayerActionController : NetworkBehaviour
 
     public override void OnStartLocalPlayer()
     {
-        GetComponent<MeshRenderer>().material.color = Color.blue;
+        anim = GetComponent<Animator>();
     }
 
     [Command]
