@@ -5,6 +5,11 @@ public class PlayerActionController : NetworkBehaviour
 {
 
     public GameObject genericProjPrefab;
+    public GameObject teleporterPrefab;
+
+    GameObject teleporterProjectile;
+
+    public GameObject teleporterInstance;
     public Transform genericProjSpawn;
 
     void Update()
@@ -24,6 +29,18 @@ public class PlayerActionController : NetworkBehaviour
         {
             CmdFire();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (teleporterInstance == null)
+            {
+                RpcTeleporter();
+            }
+            else
+            {
+                CmdTranslocate();
+            }
+        }
     }
 
     public override void OnStartLocalPlayer()
@@ -34,17 +51,47 @@ public class PlayerActionController : NetworkBehaviour
     [Command]
     void CmdFire()
     {
-        // Create generic projectile prefab
-        GameObject genericProjectile = (GameObject)Instantiate(genericProjPrefab, genericProjSpawn.position,genericProjSpawn.rotation);
+        if (base.isServer)
+        {
+            // Create generic projectile prefab
+            GameObject genericProjectile = (GameObject)Instantiate(genericProjPrefab, genericProjSpawn.position, genericProjSpawn.rotation);
+            // Make prefab move
+            genericProjectile.GetComponent<GenericProjectileLogic>().velocity = genericProjectile.transform.forward * 6;
+            // Destroy the bullet after 2 seconds
+            Destroy(genericProjectile, 2.0f);
+            //Spawn it on the network
+            NetworkServer.Spawn(genericProjectile);
+        }
+    }
 
-        // Make prefab move
-        genericProjectile.GetComponent<Rigidbody>().velocity = genericProjectile.transform.forward * 6;
+    [ClientRpc]
+    void RpcTeleporter()
+    {
+        if (isLocalPlayer)
+        {
+            // Create generic projectile prefab
+            teleporterProjectile = (GameObject)Instantiate(teleporterPrefab, genericProjSpawn.position, genericProjSpawn.rotation);
 
-        //Spawn it on the network
-        NetworkServer.Spawn(genericProjectile);
+            // Make prefab move
+            teleporterProjectile.GetComponent<TeleporterLogic>().velocity = teleporterProjectile.transform.forward * 6;
 
-        // Destroy the bullet after 2 seconds
-        Destroy(genericProjectile, 2.0f);
+            teleporterInstance = teleporterProjectile;
 
+            //Spawn it on the network
+            NetworkServer.Spawn(teleporterProjectile);
+
+            // Destroy the bullet after 2 seconds
+            Destroy(teleporterProjectile, 4.0f);
+        }
+    }
+
+    [Command]
+    void CmdTranslocate()
+    {
+        if (base.isServer)
+        {
+            gameObject.transform.position = teleporterProjectile.transform.position;
+            Destroy(teleporterProjectile);
+        }
     }
 }
