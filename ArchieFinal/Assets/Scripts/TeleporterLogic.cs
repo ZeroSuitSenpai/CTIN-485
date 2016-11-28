@@ -12,7 +12,9 @@ public class TeleporterLogic : NetworkBehaviour
     private void Update() {
         //If the local player hits q, teleport
         if (isLocalPlayer) {
-
+            if (Input.GetKeyDown(KeyCode.Q)) {
+                CmdTeleport();
+            }
         }
     }
 
@@ -36,6 +38,15 @@ public class TeleporterLogic : NetworkBehaviour
         if (playerOwner != null) {
             playerOwner.transform.position = transform.position;
             Destroy(gameObject);
+        }
+        else {
+            Debug.LogError("Do not have a player");
+        }
+    }
+
+    protected void OnDisable() {
+        if (playerOwner != null) {
+            playerOwner.GetComponent<PlayerActionController>().teleporterInstance = null;
         }
     }
 }

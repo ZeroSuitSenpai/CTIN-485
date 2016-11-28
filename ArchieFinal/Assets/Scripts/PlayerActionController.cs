@@ -79,7 +79,7 @@ public class PlayerActionController : NetworkBehaviour
             //Spawn it on the network
             NetworkServer.Spawn(teleporterInstance);
 
-            // Destroy the bullet after 2 seconds
+            // Destroy the bullet after 4 seconds
             Destroy(teleporterInstance.gameObject, 4.0f);
         }
     }
