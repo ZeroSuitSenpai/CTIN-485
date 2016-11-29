@@ -22,6 +22,9 @@ public class PlayerActionController : NetworkBehaviour
     public GameObject darkProj;
     public GameObject lightProj;
 
+    public GameObject darkTeleport;
+    public GameObject lightTeleport;
+
     public GameObject teleporterInstance;
     public Transform genericProjSpawn;
 
@@ -95,6 +98,10 @@ public class PlayerActionController : NetworkBehaviour
                 if (lightProj != null) {
                     genericProjPrefab = lightProj;
                 }
+                //set light teleport
+                if (lightTeleport != null) {
+                    teleporterPrefab = lightTeleport;
+                }
             }
             //Otherwise its dark unity chan
             else {
@@ -108,6 +115,10 @@ public class PlayerActionController : NetworkBehaviour
                 //Set dark proj
                 if (darkProj != null) {
                     genericProjPrefab = darkProj;
+                }
+                //Set the dark teleport
+                if (darkTeleport != null) {
+                    teleporterPrefab = darkTeleport;
                 }
             }
         }
@@ -126,7 +137,10 @@ public class PlayerActionController : NetworkBehaviour
                 if (darkProj != null) {
                     genericProjPrefab = darkProj;
                 }
-                
+                //Set the dark teleport
+                if (darkTeleport != null) {
+                    teleporterPrefab = darkTeleport;
+                }
             }
             //Otherwise its light unity chan
             else {
@@ -135,6 +149,10 @@ public class PlayerActionController : NetworkBehaviour
                 //Set light proj
                 if (lightProj != null) {
                     genericProjPrefab = lightProj;
+                }
+                //set light teleport
+                if (lightTeleport != null) {
+                    teleporterPrefab = lightTeleport;
                 }
             }
         }
