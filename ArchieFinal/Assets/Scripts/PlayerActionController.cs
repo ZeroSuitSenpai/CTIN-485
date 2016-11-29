@@ -28,6 +28,8 @@ public class PlayerActionController : NetworkBehaviour
     public GameObject teleporterInstance;
     public Transform genericProjSpawn;
 
+    public Vector3 serverPlayerSpawnPos;
+
     void Update()
     {
         if (!isLocalPlayer)
@@ -54,7 +56,7 @@ public class PlayerActionController : NetworkBehaviour
         if (transform.position.z > 16) {
             movePos.z = 16;
         }
-        if (transform.position.x < -13.35f) {
+        if (transform.position.x < -7f) {
             movePos.x = -7f;
         }
         if (transform.position.x > 11) {
@@ -102,6 +104,9 @@ public class PlayerActionController : NetworkBehaviour
                 if (lightTeleport != null) {
                     teleporterPrefab = lightTeleport;
                 }
+                //Move to your spawn point server host 
+                transform.position = serverPlayerSpawnPos;
+                transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
             }
             //Otherwise its dark unity chan
             else {
@@ -201,7 +206,7 @@ public class PlayerActionController : NetworkBehaviour
             TeleporterLogic tLogic = teleporterInstance.GetComponent<TeleporterLogic>();
 
             // Make prefab move
-            tLogic.velocity = teleporterInstance.transform.forward * 2;
+            tLogic.velocity = teleporterInstance.transform.forward * 3;
 
             //Set its owner to be this object across the network
             tLogic.RpcSetPlayerOwner(gameObject);
