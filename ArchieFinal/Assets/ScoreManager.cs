@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
 public class ScoreManager : MonoBehaviour {
     public Text lightScore;
@@ -32,6 +33,7 @@ public class ScoreManager : MonoBehaviour {
     }
     public void EndGame() {
         //quit and return
-        Network.CloseConnection(Network.connections[0], true);
+        Destroy(FindObjectOfType<NetworkLobbyManager>().gameObject);
+        SceneManager.LoadScene(0);
     }
 }
