@@ -54,6 +54,18 @@ public class PlayerHealth : NetworkBehaviour {
         }
     }
 
+    [ClientRpc]
+    public void RpcTakeDamage(int damage)
+    {
+        OnChangeHealth(damage);
+    }
+
+    [Command]
+    public void CmdTakeDamage(int damage)
+    {
+        RpcTakeDamage(damage);
+    }
+
      IEnumerator RespawnWithDelay(float delay)
     {
         if (isLocalPlayer)

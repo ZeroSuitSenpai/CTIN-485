@@ -11,6 +11,7 @@ public class PlayerActionController : NetworkBehaviour
 
     public GameObject genericProjPrefab;
     public GameObject teleporterPrefab;
+    public GameObject deathBallPrefab;
 
     public GameObject teleporterInstance;
     public Transform genericProjSpawn;
@@ -50,6 +51,10 @@ public class PlayerActionController : NetworkBehaviour
                 CmdServerTeleport(teleporterInstance);
             }
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            CmdDeathBall();
+        }
     }
 
     public override void OnStartLocalPlayer()
@@ -75,8 +80,12 @@ public class PlayerActionController : NetworkBehaviour
         {
             // Create generic projectile prefab
             GameObject genericProjectile = (GameObject)Instantiate(genericProjPrefab, genericProjSpawn.position, genericProjSpawn.rotation);
+            //Get script
+            GenericProjectileLogic gLogic = genericProjectile.GetComponent<GenericProjectileLogic>();
             // Make prefab move
-            genericProjectile.GetComponent<GenericProjectileLogic>().velocity = genericProjectile.transform.forward * 6;
+            gLogic.velocity = genericProjectile.transform.forward * 6;
+            //Set player owner
+            gLogic.RpcSetPlayerOwner(gameObject);
             // Destroy the bullet after 2 seconds
             Destroy(genericProjectile, 2.0f);
             //Spawn it on the network
@@ -96,7 +105,7 @@ public class PlayerActionController : NetworkBehaviour
             TeleporterLogic tLogic = teleporterInstance.GetComponent<TeleporterLogic>();
 
             // Make prefab move
-            tLogic.GetComponent<TeleporterLogic>().velocity = teleporterInstance.transform.forward * 6;
+            tLogic.velocity = teleporterInstance.transform.forward * 6;
 
             //Set its owner to be this object across the network
             tLogic.RpcSetPlayerOwner(gameObject);
@@ -112,6 +121,16 @@ public class PlayerActionController : NetworkBehaviour
         }
     }
 
+    [Command]
+    void CmdDeathBall()
+    {
+        GameObject deathBall = (GameObject)Instantiate(deathBallPrefab, gameObject.transform.position, gameObject.transform.rotation);
+        DeathBallLogic dBLogic = deathBall.GetComponent<DeathBallLogic>();
+        dBLogic.RpcSetPlayerOwner(gameObject);
+        NetworkServer.Spawn(deathBall);
+        Destroy(deathBall, 0.1f);
+    }
+
     [ClientRpc]
     void RpcSetTeleporter(GameObject teleporter) {
         teleporterInstance = teleporter;
@@ -121,6 +140,7 @@ public class PlayerActionController : NetworkBehaviour
     void CmdServerTeleport(GameObject teleporter) {
         RpcClientTeleport(teleporter);
     }
+
     [ClientRpc]
     void RpcClientTeleport(GameObject teleporter) {
         Vector3 targetPos = teleporterInstance.transform.position;

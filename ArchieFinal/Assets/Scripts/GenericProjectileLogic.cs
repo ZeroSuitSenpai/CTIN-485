@@ -6,6 +6,7 @@ public class GenericProjectileLogic : NetworkBehaviour
 {
     public float moveSpeed = 10.0f;
     public Vector3 velocity;
+    public GameObject playerOwner;
 
     private void FixedUpdate()
     {
@@ -21,10 +22,16 @@ public class GenericProjectileLogic : NetworkBehaviour
     { 
         var hit = other.gameObject;
         var healthScript = hit.GetComponent<PlayerHealth>();
-        if (healthScript != null)
+        if (healthScript != null && other.gameObject != playerOwner)
         {
             healthScript.TakeDamage(20);
         }
         Destroy(gameObject);
+    }
+
+    [ClientRpc]
+    public void RpcSetPlayerOwner(GameObject player)
+    {
+        playerOwner = player;
     }
 }

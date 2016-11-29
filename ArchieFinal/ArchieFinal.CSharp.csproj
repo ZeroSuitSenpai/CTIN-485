@@ -84,6 +84,7 @@
     <Compile Include="Assets\Imported Assets\UnityChan\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Imported Assets\UnityChan\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Imported Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
+    <Compile Include="Assets\Scripts\DeathBallLogic.cs" />
     <Compile Include="Assets\Scripts\GenericProjectileLogic.cs" />
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerActionController.cs" />
