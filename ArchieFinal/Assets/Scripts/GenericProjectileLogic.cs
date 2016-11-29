@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 public class GenericProjectileLogic : NetworkBehaviour
 {
-    public float moveSpeed = 10.0f;
+    public float moveSpeed = 5.0f;
     public Vector3 velocity;
     public GameObject playerOwner;
 

@@ -84,6 +84,8 @@
     <Compile Include="Assets\Imported Assets\UnityChan\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Imported Assets\UnityChan\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Imported Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
+    <Compile Include="Assets\Imported Assets\ZRNAssets\PQAssets\Query-Chan-SD\Fukuoka_Props\Dashi\Scripts\RotateProp.cs" />
+    <Compile Include="Assets\Imported Assets\ZRNAssets\PQAssets\Query-Chan-SD\Fukuoka_Props\Sounds\MatsuriSoundController.cs" />
     <Compile Include="Assets\Scripts\DeathBallLogic.cs" />
     <Compile Include="Assets\Scripts\GenericProjectileLogic.cs" />
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
@@ -107,6 +109,13 @@
     <None Include="Assets\Imported Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
     <None Include="Assets\Imported Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
     <None Include="Assets\Imported Assets\UnityChan\license.txt" />
+    <None Include="Assets\Imported Assets\ZRNAssets\005030_06196_1_1\Documents\ReadMe.txt" />
+    <None Include="Assets\Imported Assets\ZRNAssets\005030_06196_1_1\Shaders\su_Zmap_DoubleSide.shader" />
+    <None Include="Assets\Imported Assets\ZRNAssets\005030_06196_1_1\Shaders\su_Zmap_river02.shader" />
+    <None Include="Assets\Imported Assets\ZRNAssets\005030_06196_1_1\Shaders\su_Zmap_way.shader" />
+    <None Include="Assets\Imported Assets\ZRNAssets\PQAssets\Query-Chan-SD\Documents\ReadMe.txt" />
+    <None Include="Assets\Imported Assets\ZRNAssets\PQAssets\Query-Chan-SD\license_en.txt" />
+    <None Include="Assets\Imported Assets\ZRNAssets\PQAssets\Query-Chan-SD\license_jp.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

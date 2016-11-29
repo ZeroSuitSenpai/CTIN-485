@@ -1,0 +1,63 @@
+Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 780 (ID=0x1004)
+    Vendor:   NVIDIA
+    VRAM:     3039 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.058 seconds
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 10.478592 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 4a2c -> priority: 1 
+  Thread -> id: 1c4 -> priority: 1 
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+MatchMakingClient Join :https://mm.unet.unity3d.com/json/reply/JoinMatchRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 386)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 386)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.437022 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 2558.
+Total: 6.299768 ms (FindLiveObjects: 0.199702 ms CreateObjectMapping: 0.082425 ms MarkObjects: 6.006299 ms  DeleteObjects: 0.010510 ms)
+
+Failed to spawn server object, assetId=23c1158aaf934e543a8adbaa8e2811a3 netId=5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Failed to spawn server object, assetId=23c1158aaf934e543a8adbaa8e2811a3 netId=6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+

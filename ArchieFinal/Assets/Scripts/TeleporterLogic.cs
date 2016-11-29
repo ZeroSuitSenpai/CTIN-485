@@ -5,7 +5,7 @@ using System.Collections;
 public class TeleporterLogic : NetworkBehaviour
 {
 
-    public float moveSpeed = 3.0f;
+    public float moveSpeed = 2.0f;
     public Vector3 velocity;
     public GameObject playerOwner;
 

@@ -9,9 +9,15 @@ public class PlayerActionController : NetworkBehaviour
     float inputH;
     float inputV;
 
+    public bool isLight;
+    public bool isDark;
+
     public GameObject genericProjPrefab;
     public GameObject teleporterPrefab;
-    public GameObject deathBallPrefab;
+
+    public GameObject darkMelee;
+    public GameObject lightMelee;
+    public GameObject deathBall;
 
     public GameObject teleporterInstance;
     public Transform genericProjSpawn;
@@ -23,8 +29,8 @@ public class PlayerActionController : NetworkBehaviour
             return;
         }
 
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 200.0f;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 5.0f;
 
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
@@ -60,6 +66,16 @@ public class PlayerActionController : NetworkBehaviour
     public override void OnStartLocalPlayer()
     {
         anim = GetComponent<Animator>();
+        if (isServer)
+        {
+            isLight = true;
+            gameObject.layer = LayerMask.NameToLayer("Light");
+        }
+        else
+        {
+            isDark = true;
+            gameObject.layer = LayerMask.NameToLayer("Dark");
+        }
     }
 
     [ClientRpc]
@@ -124,9 +140,14 @@ public class PlayerActionController : NetworkBehaviour
     [Command]
     void CmdDeathBall()
     {
-        GameObject deathBall = (GameObject)Instantiate(deathBallPrefab, gameObject.transform.position, gameObject.transform.rotation);
-        DeathBallLogic dBLogic = deathBall.GetComponent<DeathBallLogic>();
-        dBLogic.RpcSetPlayerOwner(gameObject);
+        if (isDark)
+        {
+            deathBall = (GameObject)Instantiate(darkMelee, gameObject.transform.position, gameObject.transform.rotation);
+        }
+        else if (isLight)
+        {
+            deathBall = (GameObject)Instantiate(lightMelee, gameObject.transform.position, gameObject.transform.rotation);
+        }
         NetworkServer.Spawn(deathBall);
         Destroy(deathBall, 0.1f);
     }
