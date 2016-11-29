@@ -64,12 +64,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="GETween">
-      <HintPath>Assets\GUI Animator\Common\Plugins\GETween.dll</HintPath>
-    </Reference>
-    <Reference Include="GUIAnimatorFREE">
-      <HintPath>Assets\GUI Animator\GUI Animator FREE\Plugins\GUIAnimatorFREE.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Imported Assets\Lobby\Scripts\DraggablePanel.cs" />
@@ -92,6 +86,7 @@
     <Compile Include="Assets\Imported Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\Imported Assets\ZRNAssets\PQAssets\Query-Chan-SD\Fukuoka_Props\Dashi\Scripts\RotateProp.cs" />
     <Compile Include="Assets\Imported Assets\ZRNAssets\PQAssets\Query-Chan-SD\Fukuoka_Props\Sounds\MatsuriSoundController.cs" />
+    <Compile Include="Assets\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\DeathBallLogic.cs" />
     <Compile Include="Assets\Scripts\GenericProjectileLogic.cs" />
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />

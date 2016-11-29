@@ -36,6 +36,24 @@ public class PlayerHealth : NetworkBehaviour {
             currentHealth = 0;
             currentHealth = maxHealth;
             transform.position = new Vector3(500, 500, 500);
+            ScoreManager gameScore = FindObjectOfType<ScoreManager>();
+            //if you are light unity chan (server and local player or client and not local player)
+            if ((isServer && isLocalPlayer) || (!isServer && !isLocalPlayer))
+            {
+                //if the score manager exists
+                if (gameScore != null) {
+                    //add score for light unitychan
+                    gameScore.IncrementLightScore();
+                }
+            }
+            //else do it for dark
+            else {
+                //if the score manager exists
+                if (gameScore != null) {
+                    //add score for light unitychan
+                    gameScore.IncrementDarkScore();
+                }
+            }
             RpcRespawn();
         }
     }
