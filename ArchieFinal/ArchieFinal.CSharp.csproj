@@ -64,6 +64,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="GETween">
+      <HintPath>Assets\GUI Animator\Common\Plugins\GETween.dll</HintPath>
+    </Reference>
+    <Reference Include="GUIAnimatorFREE">
+      <HintPath>Assets\GUI Animator\GUI Animator FREE\Plugins\GUIAnimatorFREE.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Imported Assets\Lobby\Scripts\DraggablePanel.cs" />
