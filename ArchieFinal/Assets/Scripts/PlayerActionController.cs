@@ -19,6 +19,9 @@ public class PlayerActionController : NetworkBehaviour
     public GameObject lightMelee;
     public GameObject deathBall;
 
+    public GameObject darkProj;
+    public GameObject lightProj;
+
     public GameObject teleporterInstance;
     public Transform genericProjSpawn;
 
@@ -88,6 +91,10 @@ public class PlayerActionController : NetworkBehaviour
             if (isLocalPlayer) {
                 isLight = true;
                 gameObject.layer = LayerMask.NameToLayer("Light");
+                //Set light proj
+                if (lightProj != null) {
+                    genericProjPrefab = lightProj;
+                }
             }
             //Otherwise its dark unity chan
             else {
@@ -97,6 +104,10 @@ public class PlayerActionController : NetworkBehaviour
                 Renderer[] renderers = GetComponentsInChildren<Renderer>();
                 foreach (Renderer rend in renderers){
                     rend.material.color = Color.black;
+                }
+                //Set dark proj
+                if (darkProj != null) {
+                    genericProjPrefab = darkProj;
                 }
             }
         }
@@ -111,11 +122,20 @@ public class PlayerActionController : NetworkBehaviour
                 foreach (Renderer rend in renderers) {
                     rend.material.color = Color.black;
                 }
+                //Set dark proj
+                if (darkProj != null) {
+                    genericProjPrefab = darkProj;
+                }
+                
             }
             //Otherwise its light unity chan
             else {
                 isLight = true;
                 gameObject.layer = LayerMask.NameToLayer("Light");
+                //Set light proj
+                if (lightProj != null) {
+                    genericProjPrefab = lightProj;
+                }
             }
         }
     }
