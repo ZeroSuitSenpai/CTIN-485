@@ -99,7 +99,7 @@ public class PlayerActionController : NetworkBehaviour
             //Get script
             GenericProjectileLogic gLogic = genericProjectile.GetComponent<GenericProjectileLogic>();
             // Make prefab move
-            gLogic.velocity = genericProjectile.transform.forward * 6;
+            gLogic.velocity = genericProjectile.transform.forward * 4;
             //Set player owner
             gLogic.RpcSetPlayerOwner(gameObject);
             // Destroy the bullet after 2 seconds
@@ -121,7 +121,7 @@ public class PlayerActionController : NetworkBehaviour
             TeleporterLogic tLogic = teleporterInstance.GetComponent<TeleporterLogic>();
 
             // Make prefab move
-            tLogic.velocity = teleporterInstance.transform.forward * 6;
+            tLogic.velocity = teleporterInstance.transform.forward * 2;
 
             //Set its owner to be this object across the network
             tLogic.RpcSetPlayerOwner(gameObject);

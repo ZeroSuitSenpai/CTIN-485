@@ -10,27 +10,29 @@ Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Da
 Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.058 seconds
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\GETween.dll (this message is harmless)
+Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\GETween.dll into Unity Child Domain
+Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\GUIAnimatorFREE.dll (this message is harmless)
+Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\GUIAnimatorFREE.dll into Unity Child Domain
+- Completed reload, in  0.125 seconds
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 10.478592 ms
+UnloadTime: 0.777790 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 4a2c -> priority: 1 
-  Thread -> id: 1c4 -> priority: 1 
-MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
+  Thread -> id: 2f98 -> priority: 1 
+  Thread -> id: 2b84 -> priority: 1 
 MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
@@ -48,16 +50,71 @@ DontDestroyOnLoad only work for root GameObjects or components on root GameObjec
 (Filename:  Line: 386)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.437022 ms
+UnloadTime: 0.454171 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 2558.
-Total: 6.299768 ms (FindLiveObjects: 0.199702 ms CreateObjectMapping: 0.082425 ms MarkObjects: 6.006299 ms  DeleteObjects: 0.010510 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2604.
+Total: 5.812404 ms (FindLiveObjects: 0.119766 ms CreateObjectMapping: 0.051170 ms MarkObjects: 1.140685 ms  DeleteObjects: 4.500229 ms)
 
-Failed to spawn server object, assetId=23c1158aaf934e543a8adbaa8e2811a3 netId=5
+Did not find target for sync message for 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-Failed to spawn server object, assetId=23c1158aaf934e543a8adbaa8e2811a3 netId=6
+Made It Here
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Made It Here
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 13
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 15
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Failed to spawn server object, assetId=23c1158aaf934e543a8adbaa8e2811a3 netId=22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 35
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Did not find target for sync message for 36
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Log: connection {1} has been disconnected by timeout; address {::ffff:52.71.166.171:9999}
+MatchMakingClient DropConnection :https://mm.unet.unity3d.com/json/reply/DropConnectionRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+MatchMakingClient DropConnection :https://mm.unet.unity3d.com/json/reply/DropConnectionRequest
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.413962 ms
+
+Unloading 437 unused Assets to reduce memory usage. Loaded Objects now: 1206.
+Total: 2.327008 ms (FindLiveObjects: 0.084638 ms CreateObjectMapping: 0.078830 ms MarkObjects: 0.716385 ms  DeleteObjects: 1.446047 ms)
 
