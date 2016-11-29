@@ -234,7 +234,7 @@ public class PlayerActionController : NetworkBehaviour
             deathBall = (GameObject)Instantiate(lightMelee, gameObject.transform.position, gameObject.transform.rotation);
         }
         NetworkServer.Spawn(deathBall);
-        Destroy(deathBall, 0.1f);
+        Destroy(deathBall, 0.5f);
     }
 
     [ClientRpc]

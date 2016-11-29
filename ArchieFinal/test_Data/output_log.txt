@@ -20,21 +20,17 @@ Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Da
 Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\GETween.dll into Unity Child Domain
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\GUIAnimatorFREE.dll (this message is harmless)
 Loading C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\GUIAnimatorFREE.dll into Unity Child Domain
-- Completed reload, in  0.102 seconds
+- Completed reload, in  0.457 seconds
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Thomas\Desktop\CTIN-485_Homework\ArchieFinal\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.837258 ms
+UnloadTime: 0.803790 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1a0c -> priority: 1 
-  Thread -> id: 434c -> priority: 1 
-MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
+  Thread -> id: 4c44 -> priority: 1 
+  Thread -> id: 5294 -> priority: 1 
 MatchMakingClient Create :https://mm.unet.unity3d.com/json/reply/CreateMatchRequest
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
@@ -43,123 +39,18 @@ DontDestroyOnLoad only work for root GameObjects or components on root GameObjec
  
 (Filename:  Line: 386)
 
-MatchMakingClient Destroy :https://mm.unet.unity3d.com/json/reply/DestroyMatchRequest
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-MatchMakingClient DropConnection :https://mm.unet.unity3d.com/json/reply/DropConnectionRequest
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.344639 ms
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 1594.
-Total: 1.115238 ms (FindLiveObjects: 0.039276 ms CreateObjectMapping: 0.054766 ms MarkObjects: 1.015110 ms  DeleteObjects: 0.005808 ms)
-
-MatchMakingClient ListMatches :https://mm.unet.unity3d.com/json/reply/ListMatchRequest
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-MatchMakingClient Join :https://mm.unet.unity3d.com/json/reply/JoinMatchRequest
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
 DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
  
 (Filename:  Line: 386)
 
-DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
- 
-(Filename:  Line: 386)
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.425959 ms
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.439235 ms
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 3484.
+Total: 5.697893 ms (FindLiveObjects: 0.260000 ms CreateObjectMapping: 0.136085 ms MarkObjects: 1.411473 ms  DeleteObjects: 3.889504 ms)
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2702.
-Total: 5.651978 ms (FindLiveObjects: 0.122255 ms CreateObjectMapping: 0.096532 ms MarkObjects: 1.157280 ms  DeleteObjects: 4.275356 ms)
-
-Did not find target for sync message for 16
+ClientRpc call on un-spawned object
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-Did not find target for sync message for 17
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 18
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 20
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 22
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 29
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 30
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 31
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 34
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 34
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 35
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 38
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 38
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 38
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 38
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 38
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 38
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 44
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 47
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 48
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Did not find target for sync message for 52
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
+Log: connection {1} has been disconnected by timeout; address {::ffff:52.86.130.215:9999}
