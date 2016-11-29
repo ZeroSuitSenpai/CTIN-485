@@ -28,15 +28,15 @@ public class PlayerActionController : NetworkBehaviour
         {
             return;
         }
-
+        //input
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 200.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * 5.0f;
 
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
-
+        //animations  (networked)
         CmdUpdateAnimations(inputH, inputV);
-
+        //movement
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
         Vector3 movePos = transform.position;
@@ -69,7 +69,6 @@ public class PlayerActionController : NetworkBehaviour
                 CmdTeleporter();
             }
             else {
-                Debug.Log("Made It Here");
                 CmdServerTeleport(teleporterInstance);
             }
         }
@@ -79,18 +78,39 @@ public class PlayerActionController : NetworkBehaviour
         }
     }
 
-    public override void OnStartLocalPlayer()
+    void Start()
     {
         anim = GetComponent<Animator>();
+        //if its server
         if (isServer)
         {
-            isLight = true;
-            gameObject.layer = LayerMask.NameToLayer("Light");
+            //if youre the local player you are the server and therefore light unity chan
+            if (isLocalPlayer) {
+                Debug.Log("1");
+                isLight = true;
+                gameObject.layer = LayerMask.NameToLayer("Light");
+            }
+            //Otherwise its dark unity chan
+            else {
+                Debug.Log("2");
+                isDark = true;
+                gameObject.layer = LayerMask.NameToLayer("Dark");
+            }
         }
         else
         {
-            isDark = true;
-            gameObject.layer = LayerMask.NameToLayer("Dark");
+            //if youre the local player you are the client and therefore dark unity chan
+            if (isLocalPlayer) {
+                Debug.Log("3");
+                isDark = true;
+                gameObject.layer = LayerMask.NameToLayer("Dark");
+            }
+            //Otherwise its light unity chan
+            else {
+                Debug.Log("4");
+                isLight = true;
+                gameObject.layer = LayerMask.NameToLayer("Light");
+            }
         }
     }
 
