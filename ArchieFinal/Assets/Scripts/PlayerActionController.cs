@@ -86,28 +86,34 @@ public class PlayerActionController : NetworkBehaviour
         {
             //if youre the local player you are the server and therefore light unity chan
             if (isLocalPlayer) {
-                Debug.Log("1");
                 isLight = true;
                 gameObject.layer = LayerMask.NameToLayer("Light");
             }
             //Otherwise its dark unity chan
             else {
-                Debug.Log("2");
                 isDark = true;
                 gameObject.layer = LayerMask.NameToLayer("Dark");
+                //Become dark
+                Renderer[] renderers = GetComponentsInChildren<Renderer>();
+                foreach (Renderer rend in renderers){
+                    rend.material.color = Color.black;
+                }
             }
         }
         else
         {
             //if youre the local player you are the client and therefore dark unity chan
             if (isLocalPlayer) {
-                Debug.Log("3");
                 isDark = true;
                 gameObject.layer = LayerMask.NameToLayer("Dark");
+                //Become dark
+                Renderer[] renderers = GetComponentsInChildren<Renderer>();
+                foreach (Renderer rend in renderers) {
+                    rend.material.color = Color.black;
+                }
             }
             //Otherwise its light unity chan
             else {
-                Debug.Log("4");
                 isLight = true;
                 gameObject.layer = LayerMask.NameToLayer("Light");
             }
