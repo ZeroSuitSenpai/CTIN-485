@@ -29,7 +29,6 @@ public class DeathBallLogic : NetworkBehaviour
                 healthScript.TakeDamage(100);
             }
         }
-        Destroy(gameObject);
     }
 
     [ClientRpc]
