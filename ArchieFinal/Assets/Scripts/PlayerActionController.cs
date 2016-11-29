@@ -85,7 +85,7 @@ public class PlayerActionController : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             //if its been longer than 2 seconds since your last death ball
-            if (Time.time - lastETime < 2) {
+            if (Time.time - lastETime > 2) {
                 //cast death ball
                 CmdDeathBall();
                 //set lastEtime to time
