@@ -262,5 +262,9 @@ public class PlayerActionController : NetworkBehaviour
         Destroy(teleporterInstance);
         teleporterInstance = null;
         transform.position = targetPos;
+        AudioSource teleportSound = GetComponent<AudioSource>();
+        if (teleportSound != null) {
+            teleportSound.Play();
+        }
     }
 }
