@@ -39,6 +39,22 @@ public class PlayerActionController : NetworkBehaviour
 
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
+        Vector3 movePos = transform.position;
+
+        //bounds
+        if (transform.position.z < 0.4) {
+            movePos.z = 0.4f;
+        }
+        if (transform.position.z > 16) {
+            movePos.z = 16;
+        }
+        if (transform.position.x < -13.35f) {
+            movePos.x = -7f;
+        }
+        if (transform.position.x > 11) {
+            movePos.x = 11;
+        }
+        transform.position = movePos;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
