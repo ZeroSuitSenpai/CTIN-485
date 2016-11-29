@@ -30,6 +30,8 @@ public class PlayerActionController : NetworkBehaviour
 
     public Vector3 serverPlayerSpawnPos;
 
+
+    private float lastETime = 0;
     void Update()
     {
         if (!isLocalPlayer)
@@ -82,7 +84,14 @@ public class PlayerActionController : NetworkBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            CmdDeathBall();
+            //if its been longer than 2 seconds since your last death ball
+            if (Time.time - lastETime < 2) {
+                //cast death ball
+                CmdDeathBall();
+                //set lastEtime to time
+                lastETime = Time.time;
+            }
+            
         }
     }
 

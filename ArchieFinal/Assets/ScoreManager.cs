@@ -32,6 +32,6 @@ public class ScoreManager : MonoBehaviour {
     }
     public void EndGame() {
         //quit and return
-        SceneManager.LoadScene(0);
+        Network.CloseConnection(Network.connections[0], true);
     }
 }
